@@ -36,7 +36,7 @@ void loop()
   if(PS3.PS3Connected || PS3.PS3NavigationConnected) {
     
     servo1.write(map(PS3.getAnalogHat(LeftHatX), 0, 255, 0, 180));  //Steering (joystick min, joystick max, left min, right max)
-    servo2.write(map(PS3.getAnalogHat(LeftHatY), 0, 255, 100, 80));   //Speed (joystick min, joystick max, reverse speed, speed max [can goto 180])
+    servo2.write(map(PS3.getAnalogHat(LeftHatY), 0, 255, 110, 70));   //Speed (joystick min, joystick max, speed max [can goto 180], speed min [can goto 0])
   }
   else 
    {
